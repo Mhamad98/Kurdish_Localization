@@ -249,6 +249,7 @@ return SynchronousFuture<CupertinoLocalizations>(
     singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
     singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
     weekdayFormat: intl.DateFormat('EEE', localeName),
+ 
    ),
 );
 
@@ -265,16 +266,16 @@ return SynchronousFuture<CupertinoLocalizations>(
 /// and formatting.
 class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   const KurdishCupertinoLocalizations({
-    required intl.DateFormat fullYearFormat,
-    required intl.DateFormat mediumDateFormat,
-    required intl.NumberFormat decimalFormat,
-    required intl.DateFormat dayFormat,
-    required intl.DateFormat doubleDigitMinuteFormat,
-    required intl.DateFormat singleDigitHourFormat,
-    required intl.DateFormat singleDigitMinuteFormat,
-    required intl.DateFormat singleDigitSecondFormat,
-    required intl.DateFormat weekdayFormat,
-    this.localeName = 'ku',
+    required this.fullYearFormat,
+    required this.mediumDateFormat,
+    required this.decimalFormat,
+    required this.dayFormat,
+    required this.doubleDigitMinuteFormat,
+    required this.singleDigitHourFormat,
+    required this.singleDigitMinuteFormat,
+    required this.singleDigitSecondFormat,
+    required this.weekdayFormat,
+    required this.localeName,
   }) : super(
           localeName: localeName,
           fullYearFormat: fullYearFormat,
@@ -289,6 +290,16 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
         );
 
   final String localeName;
+  final intl.DateFormat fullYearFormat;
+  final intl.DateFormat mediumDateFormat;
+  final intl.NumberFormat decimalFormat;
+  final intl.DateFormat dayFormat;
+  final intl.DateFormat doubleDigitMinuteFormat;
+  final intl.DateFormat singleDigitHourFormat;
+  final intl.DateFormat singleDigitMinuteFormat;
+  final intl.DateFormat singleDigitSecondFormat;
+  final intl.DateFormat weekdayFormat;
+
 
   // Required getters from CupertinoLocalizations
   @override
@@ -356,10 +367,12 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
 
   @override
   String get shareButtonLabel => 'هاوبەشکردن';
-@override
-String get datePickerHourSemanticsLabelOther => 'هەڵبژاردنی کاتژمێر';
 
-@override
-String get datePickerMinuteSemanticsLabelOther => 'هەڵبژاردنی خولەک';
+  @override
+  String get datePickerHourSemanticsLabelOther => 'هەڵبژاردنی کاتژمێر';
+
+  @override
+  String get datePickerMinuteSemanticsLabelOther => 'هەڵبژاردنی خولەک';
+
 
 }
